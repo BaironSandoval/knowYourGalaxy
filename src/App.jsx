@@ -49,7 +49,10 @@ function App() {
       style={{ backgroundImage: `url("${background}")` }}
     >
         <div className="card">
-          <h1>KNOW YOUR GALAXY</h1>
+         <div className="titule">
+          <h2>KNOW YOUR</h2>
+          <h2>GALAXY</h2>
+         </div>
         <Phrase phrase={phraseObject.phrase} />
           <p className="author">
             Author: {phraseObject.author}
