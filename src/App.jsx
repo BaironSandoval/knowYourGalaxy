@@ -14,9 +14,8 @@ const backgrounds = [space1, space2, space3, space4];
 
 function App() {
   const getRamndomPhrase = () => phrases[getRamndomNumber(phrases.length - 1)];
-  const getRamndomBackground = () =>
-    backgrounds[getRamndomNumber(backgrounds.length - 1)];
-
+  const getRamndomBackground = () => backgrounds[getRamndomNumber(backgrounds.length - 1)];
+  
   const [phraseObject, setphraseObject] = useState(getRamndomPhrase());
   const [background, setBackground] = useState(getRamndomBackground());
 
@@ -50,15 +49,14 @@ function App() {
     >
         <div className="card">
           <h1>KNOW YOUR GALAXY</h1>
-        <Phrase phrase={phraseObject.phrase} />
+          <Phrase phrase={phraseObject.phrase} />
           <p className="author">
             Author: {phraseObject.author}
           </p>
           <div className="btn.container">
             <Button handlerClick={handlerClick} />
           </div>
-      </div>
-      
+      </div>      
     </div>
   );
 }

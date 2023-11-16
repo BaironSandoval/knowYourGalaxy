@@ -5,3 +5,8 @@
     padding: 30px 20px;
     color: #000000;
 }
+.phrase_container p {
+    font-size: 2rem;
+    font-style: italic;
+    filter: drop-shadow(10px 8px 6px #2c2c2c);
+}
