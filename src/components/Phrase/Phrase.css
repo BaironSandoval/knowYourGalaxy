@@ -1,12 +1,10 @@
 .phrase_container {
-    text-align: center;
-    min-width: 250px;
-    max-width: 500px;
-    padding: 30px 20px;
-    color: #000000;
+  text-align: center;
+  min-width: 250px;
+  max-width: 500px;
 }
 .phrase_container p {
-    font-size: 2rem;
-    font-style: italic;
-    filter: drop-shadow(10px 8px 6px #2c2c2c);
+  font-size: 2rem;
+  font-style: italic;
+  filter: drop-shadow(10px 8px 6px #2c2c2c);
 }

@@ -1,41 +1,36 @@
 *,
 ::before,
 ::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .container_app {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.btn_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .card {
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    margin: 20px;
-    text-align: center;
-    background-color: rgba(245, 245, 220, 0.425);
-    color: #000000b6;
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  color: #ffffffb6;
 }
 .author {
-    background-color: rgba(0, 255, 255, 0.473);
-    padding: 5px;
-    border-radius: 5px;
-    color: #000000b6;
+  background-color: rgba(0, 255, 255, 0.473);
+  padding: 5px;
+  color: #000000b6;
 }

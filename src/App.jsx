@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { getRamndomNumber } from "./utils/getRandom";
 import phrases from "./assets/phrases.json";
 import Phrase from "./components/Phrase/Phrase";
-import Button from "./components/Button/Button";
 
 import "./App.css";
 import space1 from "./assets/space1.gif";
@@ -14,7 +13,16 @@ import space6 from "./assets/space6.gif";
 import space7 from "./assets/space7.gif";
 import space8 from "./assets/space8.gif";
 
-const backgrounds = [space1, space2, space3, space4, space5, space6, space7, space8];
+const backgrounds = [
+  space1,
+  space2,
+  space3,
+  space4,
+  space5,
+  space6,
+  space7,
+  space8,
+];
 
 function App() {
   const getRamndomPhrase = () => phrases[getRamndomNumber(phrases.length - 1)];
@@ -103,9 +111,6 @@ function App() {
       <div className="card">
         <Phrase phrase={phraseObject.phrase} />
         <p className="author">Author: {phraseObject.author}</p>
-        <div className="btn.container">
-          <Button handlerClick={handlerClick} />
-        </div>
       </div>
     </div>
   );
