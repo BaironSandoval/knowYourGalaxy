@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { getRamndomNumber } from "./utils/getRandom";
 import phrases from "./assets/phrases.json";
 import Phrase from "./components/Phrase/Phrase";
@@ -33,6 +33,7 @@ function App() {
 
     setphraseObject(newPhrase);
   };
+
   const changeBackground = () => {
     let newBackground = getRamndomBackground();
 
@@ -47,6 +48,53 @@ function App() {
     changePhrase();
     changeBackground();
   };
+
+  useEffect(() => {
+    const handleTouchMove = (e) => {
+      const inicioX = e.touches[0].clientX;
+      let deltaX = 0;
+
+      const handleTouchEnd = () => {
+        if (deltaX > 50) {
+          changePhrase();
+          changeBackground();
+        } else if (deltaX < -50) {
+          changePhrase();
+          changeBackground();
+        }
+      };
+
+      document.addEventListener("touchmove", (e) => {
+        deltaX = e.touches[0].clientX - inicioX;
+      });
+
+      document.addEventListener("touchend", handleTouchEnd);
+
+      return () => {
+        document.removeEventListener("touchmove", handleTouchMove);
+        document.removeEventListener("touchend", handleTouchEnd);
+      };
+    };
+
+    const handleWheel = (e) => {
+      if (e.deltaY > 50) {
+        changePhrase();
+        changeBackground();
+      } else if (e.deltaY < -50) {
+        changePhrase();
+        changeBackground();
+      }
+    };
+
+    document.addEventListener("touchstart", handleTouchMove);
+    document.addEventListener("wheel", handleWheel);
+
+    return () => {
+      document.removeEventListener("touchstart", handleTouchMove);
+      document.removeEventListener("wheel", handleWheel);
+    };
+  }, [changePhrase, changeBackground]);
+
   return (
     <div
       className="container_app"
